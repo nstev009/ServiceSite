@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import logoPng from './assets/logo.png';
+import logoPng from './assets/logo_cropped.png';
+import heroImg from './assets/team_photo.avif';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,19 +20,16 @@ function App() {
       </nav>
 
       {/* Main Content */}
-      <div className="main-content">
-        <h1>Shift Happens</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
+      <div className="main-content hero-section">
+        <div className="hero-image-container">
+          <img src={heroImg} alt="Hero" className="hero-image" />
         </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
+        <div className="hero-title-container">
+          <h1 className="hero-title">shift happens.</h1>
+          <p className="hero-subtitle"> <div className = "booknowbutton"> Book now.</div></p>
+          <p className="hero-subtitle">Repair Today.</p>
+          <p className="hero-subtitle">Ride Tomorrow.</p>
+        </div>
       </div>
     </>
   )
