@@ -26,7 +26,7 @@ function App() {
         </div>
         <div className="hero-title-container">
           <h1 className="hero-title">shift happens.</h1>
-          <p className="hero-subtitle"> <div className = "booknowbutton"> Book now.</div></p>
+          <button className="hero-subtitle booknow-inline-btn">Book now.</button>
           <p className="hero-subtitle">Repair Today.</p>
           <p className="hero-subtitle">Ride Tomorrow.</p>
         </div>
