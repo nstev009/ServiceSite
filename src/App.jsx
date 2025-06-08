@@ -14,7 +14,7 @@ function Home() {
       </div>
       <div className="hero-title-container">
         <h1 className="hero-title">shift happens.</h1>
-        <button className="hero-subtitle booknow-inline-btn">Book now.</button>
+        <button className="hero-subtitle booknow-inline-btn" onClick={() => navigate('/book')}>Book now.</button>
         <p className="hero-subtitle">Repair Today.</p>
         <p className="hero-subtitle">Ride Tomorrow.</p>
       </div>
