@@ -1,0 +1,89 @@
+.about-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 60vh;
+}
+
+.about-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Changed to column to stack content vertically */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: center;
+  padding: 2rem;
+}
+
+.content-wrapper {
+  max-width: 90%;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4.5vw, 3.5rem); /* Slightly reduced from 5vw to 4.5vw */
+  margin-bottom: 1.5rem;
+  white-space: nowrap; /* Prevents wrapping to multiple lines */
+}
+
+.about-text {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.icons-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 90%;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-image {
+  width: 5rem; /* Fixed width for the icons */
+  height: 5rem; /* Fixed height for the icons */
+  object-fit: contain;
+}
+
+.icon-btn{
+    background: none;
+}
+
+.icon-btn:hover{
+    border-color:#f54702;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-column {
+    padding: 1.5rem;
+  }
+
+  .content-wrapper {
+    max-width: 95%; /* Increased from 90% to 95% on mobile */
+  }
+  
+  .hero-title {
+    white-space: normal; /* Allow wrapping on very small screens if needed */
+  }
+}
