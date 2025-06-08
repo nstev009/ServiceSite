@@ -25,7 +25,7 @@ function Home() {
 function App() {
   const navigate = useNavigate();
   return (
-    <>
+    <div className="app-container">
       {/* Navigation Bar */}
       <nav className="navbar">
         <div className="navbar-left">
@@ -43,18 +43,21 @@ function App() {
           <button className="nav-btn book-btn" onClick={() => navigate('/book')}>Book Now</button>
         </div>
       </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/book" element={<Book />} />
-      </Routes>
-
+      
+      {/* Main Content */}
+      <main className="page-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/book" element={<Book />} />
+        </Routes>
+      </main>
 
       {/* Footer */}
       <footer className="site-footer">
         <p>© 2025 Shift Happens · Designed by Aidan Lebelle & Noah Stevens</p>
       </footer>
-    </>
+    </div>
   );
 }
 

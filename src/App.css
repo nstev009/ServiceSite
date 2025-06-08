@@ -9,8 +9,11 @@ html, body {
 }
 
 #root {
-  width: 100%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make the root element at least the height of the viewport */
+  width: 100vw;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -138,13 +141,12 @@ html, body {
 }
 
 .main-content {
-  margin-top: 64px; /* match navbar height */
   width: 100%;
-  min-height: calc(100vh - 64px);
   display: flex;
   justify-content: center;
   align-items: flex-start;
   box-sizing: border-box;
+  flex: 1 0 auto;
 }
 
 .hero-section {
@@ -235,14 +237,6 @@ html, body {
   right: 0;
 }
 
-/* Make sure the footer stays at the bottom */
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
-}
-
 .site-footer p {
   margin: 0;
 }
@@ -256,9 +250,17 @@ html, body {
   }
 }
 
-@media (max-width: 700px) {
-  .site-footer {
-    padding: 0.75rem 0;
-    font-size: 0.7rem;
-  }
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.page-content {
+  flex: 1;
+  margin-top: 64px; /* match navbar height */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
