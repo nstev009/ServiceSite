@@ -3,6 +3,7 @@ import About from './About';
 import './App.css';
 import logoPng from './assets/logo_cropped.png';
 import heroImg from './assets/team_photo.avif';
+import Book from './Book';
 
 function Home() {
   const navigate = useNavigate();
@@ -39,12 +40,13 @@ function App() {
         </div>
         <div className="navbar-right">
           <button className="nav-btn" onClick={() => navigate('/about')}>About Us</button>
-          <button className="nav-btn book-btn">Book Now</button>
+          <button className="nav-btn book-btn" onClick={() => navigate('/book')}>Book Now</button>
         </div>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/book" element={<Book />} />
       </Routes>
     </>
   );
