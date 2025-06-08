@@ -216,3 +216,49 @@ html, body {
 .booknow-inline-btn:hover {
   color: #f54702;
 }
+
+.site-footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 1rem 0;
+  background-color: #f8f8f8;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: auto;
+  border-top: 1px solid #dcdcdc;
+  border-radius: 0; /* Remove border radius */
+  position: relative; /* Ensure proper positioning */
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Make sure the footer stays at the bottom */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* For dark mode or different styling */
+@media (prefers-color-scheme: dark) {
+  .site-footer {
+    background-color: #1a1a1a;
+    color: #999;
+    border-top: 1px solid #333;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-footer {
+    padding: 0.75rem 0;
+    font-size: 0.7rem;
+  }
+}

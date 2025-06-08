@@ -48,6 +48,12 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/book" element={<Book />} />
       </Routes>
+
+
+      {/* Footer */}
+      <footer className="site-footer">
+        <p>© 2025 Shift Happens · Designed by Aidan Lebelle & Noah Stevens</p>
+      </footer>
     </>
   );
 }
